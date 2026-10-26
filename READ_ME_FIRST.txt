@@ -1,7 +1,7 @@
 RAWVOICE 1.0 — CHATGPT + CLAUDE
 
 Start with README.md, release-page.html or SETUP_GUIDE.txt.
-For ChatGPT, download RAWVOICE_PROJECT_GUIDE.txt and use the private Project instructions.
+For ChatGPT, download and unzip RawVoice_ChatGPT_1.0.zip. Its folder contains the Project guide, instructions and setup guide.
 For Claude custom-skill installation, use RawVoice_Claude_1.0.zip.
 Install only RawVoice_Claude_1.0.zip into Claude. Do not upload the entire public-release or publishing-kit ZIP as a skill.
 
@@ -10,6 +10,7 @@ RawVoice helps AI write in your voice through an optional taste interview, reusa
 AI can still make mistakes. Review the output and verify factual claims before use or publication.
 
 Inside this release:
+- RawVoice_ChatGPT_1.0.zip — ChatGPT starter folder with guide, instructions, setup, limitations and license.
 - RawVoice_Claude_1.0.zip — the installable skill, including its source and MIT license.
 - SETUP_GUIDE.txt — both platform routes, interview, review and reuse.
 - RAWVOICE_PROJECT_GUIDE.txt — combined workflow reference for Project-based use.

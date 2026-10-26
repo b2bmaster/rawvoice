@@ -1,13 +1,15 @@
-Your tone, your phrasing, your paragraph rhythm: writing preferences are worth keeping for the next draft.
+You asked AI to write an email. It sounds like a press release.
 
-RawVoice turns those preferences into something you can save.
+Tired of that? I’m releasing RawVoice 1.0.
 
-It works with ChatGPT and Claude. Start with a 15-question Quick interview, or bring a voice profile you already use. You get a detailed profile and a short voice card to review and keep in a private Project.
+It helps ChatGPT and Claude learn how you write: your words, your tone and the phrases you’d never say.
 
-Then use those files to guide the next post, article or email. If your preferences change, update the profile rather than starting the whole interview again.
+Answer 15 questions or bring your own writing samples. Get a voice profile and a short voice card. Review them, keep them in a private Project and use them for emails, posts, presentations and more.
 
-The download includes a Project setup for ChatGPT, an installable Claude skill, and a guide to using the same approved voice files in either platform.
+Less “in today’s fast-paced world.” More you.
 
-AI can still get things wrong. Read the draft, check the facts and make the final call yourself.
+Free under the MIT license. You still check the facts; RawVoice helps with the voice.
 
-RawVoice 1.0 is my first release version. I'd welcome feedback on the interview, the setup and whether the writing feels closer to your own. Keep private profiles and confidential examples out of feedback.
+Get RawVoice: https://github.com/b2bmaster/rawvoice
+
+Publishing note: this is prepared launch copy. The repository is currently private and the release is a draft; share the link publicly only after publication.

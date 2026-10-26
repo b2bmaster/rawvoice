@@ -12,12 +12,17 @@ Included
 - Setup guide, Project instructions, product description, limitations, fictional walkthrough, launch draft and feedback template.
 
 Preparation
+Publisher review updates add a self-contained ChatGPT starter, inline fictional example, copyable first prompts, issue reporting and consistent two-platform instructions. The Project route no longer treats the expected absence of a native skill as an installation failure.
+
 Onboarding and product copy cover both ChatGPT and Claude. ChatGPT uses a combined Project guide and instructions; Claude also has an installable skill ZIP. References to absent local installers/import scripts were removed. The existing MIT license and source attribution are retained.
 
 Observed testing
 An internal pre-release build completed the full Quick interview, preserved the transcript exactly, retrieved saved preferences in fresh Project chats and visibly loaded RawVoice for ordinary LinkedIn prompts. The clean run used a fictional persona, no mixed prompts or corrective follow-ups, and Stop Slop off.
 
 The same run found unsupported claims in a compact card and writing drafts. Those observations remain failures in the internal audit. LIMITATIONS.txt explains the review risks. The 1.0 label does not imply a perfect-accuracy guarantee or a new factual-accuracy pass.
+
+ChatGPT Project verification
+A live Project smoke test is pending. The available browser was signed out during publisher preparation; no successful ChatGPT run is claimed.
 
 Validation scope
 Core writing references, factual-integrity guidance, interview playbook, profile template and cleaner remain unchanged from the tested internal build. Handoff text, Project setup instructions, product copy and release labels changed. No new ChatGPT or Claude end-to-end model test is claimed for these documentation and packaging changes. Archive, metadata, links and private-data checks were run for this package; no new full Claude end-to-end test was run after those preparation changes. Platform setup guidance was checked against Claude's official help pages on 26 October 2026.

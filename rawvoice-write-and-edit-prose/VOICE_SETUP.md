@@ -1,10 +1,10 @@
-# RawVoice 1.0 — ChatGPT and Claude setup
+RawVoice 1.0 — ChatGPT and Claude setup
 
-Teach it your voice. Keep the profile.
+Tired of AI slop? Make it sound like you.
 RawVoice uses your reviewed preferences and examples to guide writing. Choose the setup for your platform below. Both routes use the same two personal voice files; they do not sync automatically between platforms.
 
 CHATGPT — PRIVATE PROJECT SETUP
-1. Download RAWVOICE_PROJECT_GUIDE.txt from this release.
+1. Download RawVoice_ChatGPT_1.0.zip from this release and unzip it. The starter folder includes RAWVOICE_PROJECT_GUIDE.txt, PROJECT_INSTRUCTIONS.txt and this setup guide.
 2. Create a private writing Project in ChatGPT. Add the downloaded guide as a Project source/file.
 3. Copy only the marked block in PROJECT_INSTRUCTIONS.txt into that Project's instructions. Keep the Project private and review who can access it.
 4. Start Quick mode or import an existing voice using the prompts below.

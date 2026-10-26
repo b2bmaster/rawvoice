@@ -1,13 +1,18 @@
 RAWVOICE — FEEDBACK
 
+Report a problem: https://github.com/b2bmaster/rawvoice/issues/new?template=bug_report.yml
+Suggest an improvement: https://github.com/b2bmaster/rawvoice/issues/new
+The repository must be public, or you must have access, to submit an issue.
+
 Please share only material you are comfortable disclosing. Do not send your full private voice profile, confidential source notes or real client/personnel information.
 
 1. Version and environment
 RawVoice version:
-Claude interface and model, if known:
+Platform (ChatGPT or Claude), interface and model, if known:
 
 2. Setup
-Could you install and enable the skill?
+Which setup did you use: ChatGPT Project, Claude skill or Claude Project guide?
+Could you finish that setup?
 Could a fresh chat in your Project use the two saved profile files?
 Where did you get stuck?
 

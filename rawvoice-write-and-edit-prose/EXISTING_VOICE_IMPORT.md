@@ -9,7 +9,7 @@ This is a **bring-your-own-voice** route, not an automatic account-memory extrac
 1. Give that profile to the AI or attach it inside a private project.
 2. Say: **"RawVoice: import my existing voice. Skip Taste Interviewer. Read the attached profile, preserve my confirmed style, and generate `VOICE_PROFILE.md` plus a concise `VOICE_CARD.md`. Flag anything ambiguous rather than inventing it."**
 3. Review the two generated files and correct errors. Keep original examples when they belong to you; do not paste private employer/customer details into public documents.
-4. Download both Markdown files. For this Claude release, add them to private Claude Project knowledge. This ZIP contains no local import script. A separately configured local agent may use manually copied approved files, but that setup is outside this Claude guide.
+4. Download both Markdown files. Add them to the private ChatGPT or Claude Project where you write. The package contains no local import script. A separately configured local agent may use manually copied approved files, but that setup is outside this Project guide.
 5. Start a **new chat in that Project** and test a writing request without mentioning the skill.
 
 ## Route B — You already taught ChatGPT or Claude your voice, but have no export file

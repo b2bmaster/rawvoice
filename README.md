@@ -1,62 +1,97 @@
 # RawVoice 1.0
 
+![RawVoice — Less AI slop. More you. ChatGPT + Claude.](assets/rawvoice-banner.svg)
+
 ## Tired of AI slop?
 
 You asked AI to write an email. It sounds like a press release.
 
 RawVoice helps ChatGPT and Claude learn how you write: the words you use, the tone you like and the phrases you’d never say.
 
-Answer a few questions or share something you’ve written. RawVoice turns that into a voice profile you can reuse for emails, posts, presentations and more.
+Answer 15 questions or share something you’ve written. Get a voice profile you can reuse for emails, posts, presentations and more.
 
-Less “in today’s fast-paced world.” More you.
+**Less “in today’s fast-paced world.” More you.**
 
-You still check the facts. RawVoice helps with the voice.
+## See the difference
 
-## Choose your setup
+An authored example for a **fictional persona**, not a recorded model result or a benchmark. Same message: send the draft by Thursday; feedback is due Friday.
 
-| ChatGPT | Claude |
+| Generic draft | With a direct, friendly voice |
 | --- | --- |
-| Use RawVoice through a private Project with uploaded reference files and Project instructions. | Install the RawVoice skill, then connect your reviewed voice files in a private Project. |
-| [Download the Project guide](RAWVOICE_PROJECT_GUIDE.txt?raw=true) and copy the [Project instructions](PROJECT_INSTRUCTIONS.txt). | [Download RawVoice_Claude_1.0.zip](RawVoice_Claude_1.0.zip?raw=true) and follow the [setup guide](SETUP_GUIDE.txt). |
+| In the spirit of seamless collaboration, please ensure the draft is shared by Thursday to facilitate timely feedback by Friday. | Send me the draft by Thursday, please. I’ll get you feedback by Friday. |
 
-The same approved voice profile and card can be transferred privately between ChatGPT and Claude. Upload them to each Project you want to use; nothing syncs automatically between accounts or platforms.
+The small voice card behind that example:
 
-## From interview to your next draft
+> Use everyday words. Make the request clear. Keep emails friendly and short. Skip corporate filler.
 
-1. **Choose a starting point.** Import an existing profile, or start Taste Interviewer in Quick mode: 15 main questions, one at a time. Deep mode offers 100.
-2. **Show what you mean.** Give examples you like, lines you'd delete, and exceptions that matter to you.
-3. **Review the two files.** Check `VOICE_PROFILE.md` and `VOICE_CARD.md` before treating them as approved preferences.
-4. **Keep them available.** Add both files to your private Project. Start a fresh chat and make a normal writing request.
-5. **Refine your voice.** When a preference changes, update the files instead of repeating the entire interview.
+[Read the fictional walkthrough](FICTIONAL_DEMO.txt).
 
-No extra humanizer or editor module is needed. The workflow includes drafting, format guidance and optional text cleanup.
+## Start with ChatGPT
 
-## What you can shape
+1. **[Download the ChatGPT starter ZIP](RawVoice_ChatGPT_1.0.zip?raw=true)** and unzip it.
+2. Create a private ChatGPT Project. Upload `RAWVOICE_PROJECT_GUIDE.txt` from the starter folder as a Project source.
+3. Copy the marked block from `PROJECT_INSTRUCTIONS.txt` into the Project instructions.
+4. Start a chat inside that Project and paste:
 
-- **Tone:** direct, reflective, formal, playful, or different by audience.
-- **Rhythm:** sentence lengths, paragraphing, openings and endings.
-- **Taste:** filler, formatting habits and stock phrases you want to avoid.
-- **Context:** what changes between a LinkedIn post, an article, an email and a spoken script.
-- **Boundaries:** firm rules, softer preferences and things you haven't decided.
+```text
+Start Taste Interviewer in Quick mode using RawVoice. Ask all 15 main questions one at a time. Then create VOICE_PROFILE.md and VOICE_CARD.md for my review. Keep confirmed preferences, inferences and unknowns separate.
+```
 
-[See the fictional walkthrough](FICTIONAL_DEMO.txt) · [Read the setup guide](SETUP_GUIDE.txt) · [Share feedback](FEEDBACK.txt)
+## Start with Claude
 
-## Keep your judgment in the loop
+1. **[Download the Claude skill ZIP](RawVoice_Claude_1.0.zip?raw=true)** and leave it zipped. Upload it through Claude’s custom Skills setting and enable it. Turn on code execution and file creation if needed. Use this named ZIP, not GitHub’s automatic Source code download.
+2. Create a private Claude Project. Copy the marked block from [PROJECT_INSTRUCTIONS.txt](PROJECT_INSTRUCTIONS.txt) into its instructions.
+3. Start a chat inside that Project and paste:
 
-AI can still misunderstand a preference or add an unsupported detail. Review the profiles and drafts, and verify factual claims before use or publication. [Read the limitations](LIMITATIONS.txt).
+```text
+Start Taste Interviewer in Quick mode using RawVoice. Ask all 15 main questions one at a time. Then create VOICE_PROFILE.md and VOICE_CARD.md for my review. Keep confirmed preferences, inferences and unknowns separate.
+```
 
-Keep personal profiles and interview answers private. RawVoice is writing guidance, not a promise of perfect accuracy, exact imitation, permanent memory or detector results. File availability, native skill support and script execution depend on the host and your setup.
+Can’t install custom skills? The [Project-guide route](SETUP_GUIDE.txt) works as a prompt-based alternative.
+
+## Keep your voice for the next chat
+
+Review both generated files. Save the approved `VOICE_PROFILE.md` and `VOICE_CARD.md`, then **add them to your Project’s sources/knowledge yourself**. A chat attachment is not proof they were saved to the Project.
+
+Open a fresh chat **inside the same Project** and try:
+
+```text
+Use my saved voice profile to write a short email from these notes:
+Please send me the draft by Thursday. I will return feedback by Friday.
+```
+
+Check that it follows your preferences and preserves the facts. If file downloads aren’t available, ask for the complete text and save the files manually. Replace outdated Project files when your preferences change.
+
+Already have a voice profile or writing samples? Skip the interview:
+
+```text
+Use the attached writing samples or existing profile to create VOICE_PROFILE.md and VOICE_CARD.md. Skip the interview. Keep explicit preferences separate from inferred style, mark unknowns and let me review both files.
+```
+
+## What you get
+
+- A detailed voice profile and a short voice card.
+- An optional 15-question Quick interview or 100-question Deep interview.
+- Guidance for emails, posts, articles, presentations and speaking scripts.
+- Format editing and optional text cleanup in the same workflow.
+- Profile files you can move privately between ChatGPT and Claude. **Nothing syncs automatically.**
+
+## Check the facts. Keep the voice.
+
+AI can still make mistakes. Review profiles and drafts, and verify factual claims before using them. RawVoice doesn’t promise perfect accuracy, exact imitation or permanent memory. Your files and the host’s available tools determine what it can use.
+
+Recorded end-to-end tests cover **Claude**. A live **ChatGPT Project test is pending**; its setup guide is provided, but this release does not claim a completed ChatGPT test. [Test scope](RELEASE_NOTES.txt) · [Limitations](LIMITATIONS.txt).
+
+## Need a hand?
+
+[Setup and troubleshooting](SETUP_GUIDE.txt) · [Report a problem](https://github.com/b2bmaster/rawvoice/issues/new?template=bug_report.yml) · [Suggest an improvement](https://github.com/b2bmaster/rawvoice/issues/new)
+
+Use fictional or redacted examples in public feedback. Keep your personal profile and interview answers private.
 
 ## Downloads and source
 
-- [ChatGPT / Project guide](RAWVOICE_PROJECT_GUIDE.txt?raw=true)
-- [Claude skill ZIP](RawVoice_Claude_1.0.zip?raw=true) — use this named ZIP, not GitHub's automatic Source code ZIP, for Claude installation.
-- [Project instructions](PROJECT_INSTRUCTIONS.txt)
-- [Skill source](rawvoice-write-and-edit-prose/)
-- [Release notes and test scope](RELEASE_NOTES.txt)
+[ChatGPT starter](RawVoice_ChatGPT_1.0.zip?raw=true) · [Claude skill](RawVoice_Claude_1.0.zip?raw=true) · [Project guide only](RAWVOICE_PROJECT_GUIDE.txt?raw=true) · [Checksums](SHA256SUMS.txt) · [Source](rawvoice-write-and-edit-prose/)
 
-**1.0 is the first public release version.** Earlier 2.x identifiers in development notes are internal pre-release labels. The recorded end-to-end testing covers Claude; this documentation update does not claim a new ChatGPT or Claude model test.
+**1.0 is the first public release version.** Earlier 2.x labels were internal development versions.
 
-## License and attribution
-
-[MIT license](LICENSE). The interviewer source credits inspiration from Ruben Hassid's Taste Interviewer method and states that it is not his official release. RawVoice is independent of OpenAI and Anthropic.
+[MIT license](LICENSE). Inspired by Ruben Hassid’s Taste Interviewer method; this is not his official release. Independent of OpenAI and Anthropic.

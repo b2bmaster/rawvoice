@@ -113,10 +113,20 @@ The script removes a narrow set of invisible characters and standardizes unusual
 - If a requested claim cannot be verified, say what is missing instead of inserting fake citations.
 - Respond in the requested language and preserve language-specific characters/diacritics unless the user explicitly requests otherwise.
 
-
 ============================================================
 SECTION: modules/taste-interviewer/INTERVIEWER.md
 ============================================================
+
+---
+name: taste-interviewer
+description: >-
+  Interview the user to learn and set their authentic writing voice and taste. Trigger when the user requests "Taste Interviewer", "set my voice", "learn my voice", "build my voice profile", "calibrate writing style", or "update my writing voice". Conduct an interactive interview one question at a time, and create a reusable RawVoice voice profile. Do not run the interview for normal drafting requests.
+license: MIT
+compatibility: Prompt-based agent skill for Claude Code, Codex, and other Agent Skills hosts. No API keys needed. Persistent local profile is best-effort and depends on file access.
+metadata:
+  version: "1.0"
+  category: writing-voice-calibration
+---
 
 # Taste Interviewer — RawVoice voice calibration
 
@@ -195,7 +205,6 @@ Before delivering either profile:
 - Read the root VOICE_SETUP.md and PROJECT_INSTRUCTIONS.md before the handoff. Deliver both actual files and the portable ledger/checkpoint, then explain: attachments work in that chat; private Project sources plus project instructions support future chats inside that Project; local agents can read ~/.rawvoice only for actual approved user profiles. Files must be available; memory promises are not storage.
 - For fictional tests, keep the warning on both files, use a separate test folder or test-only Project, adapt project instructions to name the fictional persona rather than "my voice", and never install the persona globally. Mention any host-injected memory limitation honestly. Do not claim Project settings were verified unless inspected.
 
-
 ============================================================
 SECTION: modules/taste-interviewer/references/INTERVIEW_PLAYBOOK.md
 ============================================================
@@ -242,7 +251,6 @@ If the user pauses the interview, tell them the count completed and how to resum
 ## Output thresholds
 
 On completion, output full evidence-backed profile and short reusable card. Before completion, output a draft profile only if requested or if the session ends. Mark provisional areas, preserve authentic quotes, avoid invented personal positions. Do not silently auto-publish the user's answers elsewhere.
-
 
 ============================================================
 SECTION: modules/taste-interviewer/references/VOICE_PROFILE_TEMPLATE.md
@@ -304,7 +312,6 @@ After completion: save this profile as `VOICE_PROFILE.md`, generate and save `VO
 
 Inference boundaries such as "don't infer X" belong under Evidence limits / Unknown. They are not evidence that X is prohibited or permitted. Preserve any separately confirmed rule and its scope; check compact card headings do not change this distinction.
 
-
 ============================================================
 SECTION: references/VOICE.md
 ============================================================
@@ -332,7 +339,6 @@ Do not invent credentials, firsthand experiences, jokes, political views, compan
 2. Confirmed authentic writing samples and interview answers.
 3. Local `~/.rawvoice/VOICE_CARD.md` and `VOICE_PROFILE.md`, if readable.
 4. These generic fallback rules.
-
 
 ============================================================
 SECTION: references/FORMAT_RULES.md
@@ -370,7 +376,6 @@ The user can type "RawVoice strict" to request an extra editing pass with sugges
 - If `~/.rawvoice/VOICE_CARD.md` exists and is readable, consult it for concrete tone, structure, and hard no's. Use the full `~/.rawvoice/VOICE_PROFILE.md` for ambiguous cases or close imitation of sentence rhythm.
 - Do not let a provisional/interview-generated voice profile override the user's newest explicit instruction or force a 100-question interview before drafting.
 - If the user requests an interview, read the integrated `modules/taste-interviewer/INTERVIEWER.md` module rather than interviewing in the normal drafting workflow.
-
 
 ============================================================
 SECTION: references/FACTUAL_INTEGRITY.md
@@ -410,7 +415,6 @@ Do not weaken supported facts just to sound cautious. If a source explicitly say
 3. Verify invented details remain inside the labeled scene, unknowns remain unknown, supplied facts survive unchanged, and suggested sequencing is not misrepresented as a confirmed process dependency.
 4. Repair before sharing; then recheck the final artifact after edits and run text cleanup when available. Do not claim guaranteed accuracy or that cleanup verifies facts.
 
-
 ============================================================
 SECTION: EXISTING_VOICE_IMPORT.md
 ============================================================
@@ -426,7 +430,7 @@ This is a **bring-your-own-voice** route, not an automatic account-memory extrac
 1. Give that profile to the AI or attach it inside a private project.
 2. Say: **"RawVoice: import my existing voice. Skip Taste Interviewer. Read the attached profile, preserve my confirmed style, and generate `VOICE_PROFILE.md` plus a concise `VOICE_CARD.md`. Flag anything ambiguous rather than inventing it."**
 3. Review the two generated files and correct errors. Keep original examples when they belong to you; do not paste private employer/customer details into public documents.
-4. Download both Markdown files. For this Claude release, add them to private Claude Project knowledge. This ZIP contains no local import script. A separately configured local agent may use manually copied approved files, but that setup is outside this Claude guide.
+4. Download both Markdown files. Add them to the private ChatGPT or Claude Project where you write. The package contains no local import script. A separately configured local agent may use manually copied approved files, but that setup is outside this Project guide.
 5. Start a **new chat in that Project** and test a writing request without mentioning the skill.
 
 ## Route B — You already taught ChatGPT or Claude your voice, but have no export file
