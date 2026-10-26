@@ -1,0 +1,29 @@
+RAWVOICE — FEEDBACK
+
+Please share only material you are comfortable disclosing. Do not send your full private voice profile, confidential source notes or real client/personnel information.
+
+1. Version and environment
+RawVoice version:
+Claude interface and model, if known:
+
+2. Setup
+Could you install and enable the skill?
+Could a fresh chat in your Project use the two saved profile files?
+Where did you get stuck?
+
+3. Voice usefulness
+Which confirmed preference did the draft follow well?
+Which preference did it miss or strengthen incorrectly?
+Did the Quick interview ask useful questions?
+
+4. Accuracy or meaning
+What did you supply? Use a short redacted or fictional example.
+What did the output say instead?
+Did it add an assumption, omit a fact or change certainty?
+Was this the first response or a later revision?
+
+5. Suggested improvement
+What would have made the result more useful?
+
+Optional comparison
+Score voice fit from 1 to 5, where 1 means very unlike your writing and 5 means close enough to edit from. This is feedback, not a validated accuracy score.

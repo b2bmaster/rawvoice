@@ -1,0 +1,29 @@
+RAWVOICE — LIMITATIONS AND USER REVIEW
+
+RawVoice helps AI write in your voice while aiming to preserve supplied facts and uncertainty. AI can still make mistakes. Review the output and verify factual claims before use or publication.
+
+What can go wrong
+- A profile summary can strengthen a preference, drop an exception, or turn an unknown into a claim of absence.
+- A fluent draft can add a plausible detail that your notes did not establish.
+- The model can misread a prompt, omit information, copy an example too closely, or select the wrong profile.
+- Automatic skill selection can fail. A saved Project instruction helps routing but does not guarantee every future invocation.
+- File availability depends on the active chat, Project and host. This is not permanent memory across all chats.
+
+Observed in internal pre-release testing
+A clean 15-question test preserved all question and answer text and successfully reused the saved profiles in fresh chats. It also produced unsupported claims: a missing handoff date became a claim that no date existed; a deadline was described as stored in a tracker without that location being supplied; reminder delivery to both editors was assumed. These are known review risks, not fixed accuracy guarantees in 1.0.
+
+Review before use
+- Read both generated profile files before treating them as approved preferences.
+- Compare names, numbers, dates, quotations and claims with your source material.
+- Look for assumptions presented as facts, especially negative claims and predictions.
+- Confirm tone, scope, confidentiality and permission to use supplied examples.
+- Make corrections and save the approved version. Replace outdated Project files.
+
+Text hygiene is separate from factual accuracy
+The optional Python cleaner removes a narrow set of copy/paste artifacts. It does not verify claims, remove every possible hidden character, prove originality or guarantee detector evasion.
+
+Privacy
+Keep profiles and interview answers in a private Project or another location you control. Review Project membership and account-memory settings. Uploaded data is handled by the AI provider under your account's settings and terms; RawVoice does not make the provider an offline service. Do not share confidential material just to complete an interview or report a bug. Use a separate Project for fictional tests.
+
+Compatibility
+The release guide targets Claude custom-skill upload and private Projects. Other hosts and prompt-only alternatives have not been certified by this release kit. Settings and feature access can change. The package includes no local-agent installer or profile-import script.

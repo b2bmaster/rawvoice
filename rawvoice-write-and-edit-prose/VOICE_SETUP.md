@@ -1,0 +1,68 @@
+# RawVoice 1.0 — Claude setup
+
+RawVoice helps Claude draft and edit in your writing voice using reviewed preferences and examples. The optional Taste Interviewer creates two reusable profile files. AI can make mistakes: review the profiles and every draft, and verify factual claims before use or publication.
+
+## What this download supports
+
+This is the Claude custom-skill ZIP. It contains the interviewer, writing guidance, format guidance and optional Python text cleaner. It does not include a command-line installer or a local profile-import script. ChatGPT, Codex, Claude Code, API and mobile-specific installation are outside this release guide; prompt-based portability is not a claim of testing on every host. You do not need a separate humanizer or editor skill.
+
+## 1. Install the skill
+
+Use `RawVoice_Claude_1.0.zip`, not the larger publishing-kit or public-release ZIP. Leave the skill ZIP compressed. In Claude, enable Code execution and file creation (called Create and edit files in some Settings layouts) if needed. Open Customize → Skills, use the add/create action, choose Upload a skill and upload the ZIP. Enable `rawvoice-write-and-edit-prose`, the installed name for RawVoice. If creation is unavailable, check your workspace's permissions with its administrator. Interface wording can change.
+
+## 2. Create a private writing Project
+
+Create a Project and inspect its visibility and invited members. Paste the instruction block from `PROJECT_INSTRUCTIONS.md` into Set project instructions and save. Use Project instructions rather than changing your account-wide instructions. The instructions help route ordinary writing requests to the installed skill. Installation alone does not guarantee selection in every chat; verify an actual skill call in a fresh drafting chat.
+
+For a fictional test, use a separate test Project. Name the fictional persona in the instructions, keep it separate from your real profile, and turn off Use account memory in that Project's Memory settings if available. Never install a fictional test profile as your real voice.
+
+## 3. Import an existing voice or start Quick mode
+
+If you already have a profile, attach it privately and say:
+
+> Import my existing writing voice. Skip Taste Interviewer. Preserve confirmed preferences and examples, flag unknowns, and generate VOICE_PROFILE.md and VOICE_CARD.md for my review.
+
+See `EXISTING_VOICE_IMPORT.md` for other import routes. RawVoice cannot retrieve inaccessible memories or chats from another account or platform.
+
+For a new profile, say:
+
+> Start Taste Interviewer in Quick mode. Ask all 15 main questions one at a time. At the end, generate downloadable VOICE_PROFILE.md and VOICE_CARD.md, plus the interview checkpoint and question log. Mark inferences and unknowns clearly.
+
+Deep mode offers 100 main questions, but this release's observed end-to-end evidence covers Quick mode. You can skip a question or stop for a partial profile. Quick profiles are provisional. Share examples you are comfortable placing in your provider account; remove unnecessary private client or employer details.
+
+## 4. Review and save both files
+
+`VOICE_PROFILE.md` is the detailed profile, including source evidence and transcript. `VOICE_CARD.md` is its compact companion. Read both. Check that usually has not become always, avoid has not become never, and missing information has not become a claim that something does not exist. Confirm examples remain examples. Correct mistakes and save the approved versions privately.
+
+Download both files, then add them to this Project's knowledge or Context area. Do not assume generating an attachment automatically adds it to Project knowledge. Verify both filenames are listed. Saying remember this is not a substitute for saving the files. Keep your profile and interview answers out of public releases, issue reports and repositories.
+
+## 5. Verify a fresh chat
+
+Open a new chat inside the same Project. Ask Claude to name the profile files it can access and report a few specific preferences. Compare with the files yourself. Then make an ordinary writing request without naming RawVoice, for example:
+
+> Draft a short LinkedIn post from these notes: [your notes]. Preserve the facts and label any invented example.
+
+Check the actual skill activity if your interface exposes it. Ask explicitly to use RawVoice if automatic selection does not occur. If the files are unavailable, attach them or check Project knowledge; do not rely on a claim of permanent memory. Files added to one Project are not a promise of access in unrelated chats.
+
+## 6. Review drafts and update your voice
+
+Before use or publication, verify names, dates, numbers, quotations, sources, conclusions and any details added beyond your notes. Review tone and confidentiality too. RawVoice provides instructions to reduce errors; it does not guarantee factual accuracy, exact voice imitation, originality or AI-detector results.
+
+When your preferences change, ask for both profile files to be regenerated, review them, and replace the old Project sources. You do not have to repeat the interview for every small update.
+
+## Text cleanup
+
+The optional `scripts/clean_text.py` checks a limited set of invisible characters and unusual spaces in saved UTF-8 text. It requires Python in a file-capable environment. It does not verify facts or detect plagiarism. A prompt-only review is not evidence that the script ran. The cleaner must not rewrite exact transcript blocks.
+
+## If something is not working
+
+- Generic writing: check the correct approved card and full profile are available in the active Project.
+- Skill not loading: check the skill is enabled, Project instructions are saved, and the task is a prose request. Explicit invocation is a fallback, not proof of automatic selection.
+- No upload option: consult your account/workspace controls and Claude's current help page.
+- Conflicting profiles: remove or replace outdated Project sources rather than relying on the model to choose correctly.
+
+## Current platform references
+
+Checked 26 October 2026. Claude's interface and workspace permissions may change.
+- Skills and ZIP upload: https://support.claude.com/en/articles/12512180-use-skills-in-claude
+- Project knowledge, instructions and memory separation: https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects

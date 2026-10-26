@@ -1,0 +1,24 @@
+RAWVOICE — FICTIONAL WALKTHROUGH
+
+This is an authored illustration of the workflow, not a verbatim Claude result, a customer testimonial or a measured before-and-after benchmark. The persona and company below are invented. No personal profile is included in the reusable skill.
+
+Persona: Alex Rowan, editor at fictional Fieldnote Studio.
+
+A generic draft
+"In today's fast-paced world, seamless collaboration is the key to unlocking editorial excellence. Our game-changing approach empowers teams to achieve better outcomes."
+
+Illustrative interview excerpt
+Question: What would you change first in that draft?
+Answer: "I'd remove the grand opening and name the actual change. Keep the tone calm. Show a concrete feature instead of claiming an outcome we haven't measured."
+
+A reviewed profile preference
+Prefer a concrete opening and calm tone. Distinguish a described feature from a measured result. This example does not establish the persona's other preferences.
+
+Illustrative personalized draft
+"In this fictional example, the review form asks editors to attach a source link beside each claim. That makes the request specific, but it doesn't tell us whether reviews will be faster. I'd try the form, ask editors what remains unclear, and review the evidence before calling it an improvement."
+
+What changed
+The draft names a feature, removes promotional filler and keeps the outcome uncertain. The user still needs to check the facts, the profile and whether the voice feels right.
+
+In real use
+Answer the interview or supply a profile. Review both generated voice files, save them in private Project knowledge, and test an ordinary writing request in a fresh chat. The walkthrough illustrates the intended process; it does not guarantee the model will produce this result.

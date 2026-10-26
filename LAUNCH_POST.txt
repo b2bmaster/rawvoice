@@ -1,0 +1,11 @@
+I've been working on RawVoice, a Claude skill that turns writing preferences into something you can review and reuse.
+
+You can start with a 15-question Quick interview or bring an existing voice profile. RawVoice creates a detailed profile and a compact voice card. Once you've reviewed them, you can save both in a private Project and use them to guide future drafts.
+
+The idea is to spend less time re-explaining your tone, paragraphing, formatting and dislikes every time you write. The interviewer, writing guidance, editing and optional text cleanup come in one package.
+
+AI can still misunderstand your preferences or add a detail your notes didn't establish. You're responsible for reviewing the draft and checking factual claims before using or publishing it.
+
+I'm interested in feedback on the setup, the usefulness of the interview and whether the resulting writing feels more like you.
+
+The download includes a setup guide, Project instructions and a fictional walkthrough. Keep your personal voice files private; share feedback without confidential examples.

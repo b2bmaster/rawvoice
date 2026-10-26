@@ -1,0 +1,18 @@
+RawVoice
+Writing guidance shaped around your voice.
+
+RawVoice helps Claude draft and edit using your writing preferences, examples and format choices. Start with the optional Taste Interviewer, or import a profile you already use.
+
+Quick mode asks 15 main questions, one at a time, across beliefs, writing mechanics, dislikes, personality, structure, boundaries and credibility. It produces a detailed VOICE_PROFILE.md and a compact VOICE_CARD.md for you to review. Deep mode offers 100 questions; the observed end-to-end testing described here covers Quick mode.
+
+Save your approved files in a private Claude Project with the supplied instructions. Future chats in that Project can use the available files to guide posts, articles, emails and other prose. You can update the files as your preferences change.
+
+The package combines the interviewer, voice-aware writing, format guidance and optional text cleanup in one skill. You do not need a separate humanizer or editor module.
+
+What to expect: a structured starting point, reusable preferences, and drafts you can review and refine. Voice quality depends on your examples, answers, task and the model. Skill selection depends on the host and your setup.
+
+RawVoice is an independent skill for Claude. It is not an official Anthropic product or an endorsement by the people whose work is credited in the source.
+
+AI can still make mistakes. Review the output and verify factual claims before use or publication. RawVoice does not guarantee perfect accuracy, exact imitation, permanent memory or AI-detector results.
+
+Version: 1.0. License: MIT. See SETUP_GUIDE.txt, LIMITATIONS.txt and RELEASE_NOTES.txt before use.

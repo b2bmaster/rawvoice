@@ -1,0 +1,25 @@
+RAWVOICE 1.0 — FIRST PUBLIC RELEASE
+Prepared 26 October 2026
+
+Release numbering
+1.0 is the first public release. Earlier 2.x labels were internal development identifiers, not previous public releases.
+
+Included
+- One Claude skill ZIP with the optional Quick (15-question) and Deep (100-question) Taste Interviewer workflows.
+- Detailed VOICE_PROFILE.md and compact VOICE_CARD.md generation for user review and private reuse.
+- Writing and format guidance, plus an optional text-cleanup script.
+- Setup guide, Project instructions, product description, limitations, fictional walkthrough, launch draft and feedback template.
+
+Preparation
+Onboarding and handoff text were aligned with this actual Claude download. References to absent local installers/import scripts were removed. The existing MIT license and source attribution are retained.
+
+Observed testing
+An internal pre-release build completed the full Quick interview, preserved the transcript exactly, retrieved saved preferences in fresh Project chats and visibly loaded RawVoice for ordinary LinkedIn prompts. The clean run used a fictional persona, no mixed prompts or corrective follow-ups, and Stop Slop off.
+
+The same run found unsupported claims in a compact card and writing drafts. Those observations remain failures in the internal audit. LIMITATIONS.txt explains the review risks. The 1.0 label does not imply a perfect-accuracy guarantee or a new factual-accuracy pass.
+
+Validation scope
+Core writing references, factual-integrity guidance, interview playbook, profile template, Project instructions and cleaner remain unchanged from the tested internal build. Handoff text, setup documentation and release labels changed. Archive, metadata, links and private-data checks were run for this package; no new full Claude end-to-end test was run after those preparation changes. Platform setup guidance was checked against Claude's official help pages on 26 October 2026.
+
+License and attribution
+MIT license, copyright 2026 RawVoice contributors, retained as supplied. The interviewer source credits inspiration from Ruben Hassid's published Taste Interviewer method and states that this is not his official release. RawVoice is an independent skill for Claude, not an official Anthropic product.
