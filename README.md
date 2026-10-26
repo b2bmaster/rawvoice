@@ -1,12 +1,16 @@
 # RawVoice 1.0
 
-## Teach it your voice. Keep the profile.
+## Tired of AI slop?
 
-**Make ChatGPT and Claude sound more like you.**
+You asked AI to write an email. It sounds like a press release.
 
-Your tone. Your paragraph rhythm. The phrases you cut on sight. RawVoice turns those preferences into a writing profile you can review, save and bring to the next draft.
+RawVoice helps ChatGPT and Claude learn how you write: the words you use, the tone you like and the phrases you’d never say.
 
-Start with a 15-question interview, or bring a profile you already use. You get two files: a detailed **voice profile** and a compact **voice card**. Keep the approved files in a private Project, then use them to guide posts, articles, emails and other writing.
+Answer a few questions or share something you’ve written. RawVoice turns that into a voice profile you can reuse for emails, posts, presentations and more.
+
+Less “in today’s fast-paced world.” More you.
+
+You still check the facts. RawVoice helps with the voice.
 
 ## Choose your setup
 

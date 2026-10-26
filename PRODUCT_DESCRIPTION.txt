@@ -1,16 +1,13 @@
 RawVoice 1.0
-Teach it your voice. Keep the profile.
 
-Make ChatGPT and Claude sound more like you.
+You asked AI to write an email. It sounds like a press release.
 
-Your tone. Your rhythm. The phrases you'd never keep. RawVoice helps turn those preferences into a writing profile you can review, save and use for the next draft.
+RawVoice helps ChatGPT and Claude learn how you write: the words you use, the tone you like and the phrases you’d never say.
 
-Start with the optional Taste Interviewer: 15 main questions in Quick mode, one at a time. Or import a profile you already use. RawVoice creates a detailed VOICE_PROFILE.md and a compact VOICE_CARD.md, with confirmed preferences separated from unknowns.
+Answer a few questions or share something you’ve written. RawVoice turns that into a voice profile you can reuse for emails, posts, presentations and more.
 
-Use the reviewed files in a private ChatGPT or Claude Project. The ChatGPT route uses the supplied Project guide and instructions; Claude also has an installable skill ZIP. You can transfer the same approved profile files between them, without repeating the interview. There is no automatic cross-platform sync.
+Less “in today’s fast-paced world.” More you.
 
-Shape the writing by audience and format: posts, articles, emails, newsletters or spoken scripts. Update your saved rules as your preferences change. The interviewer, drafting guidance, format editing and optional text cleanup are part of one workflow.
+You still check the facts. RawVoice helps with the voice.
 
-AI can still make mistakes. Review the output and verify factual claims before use or publication. Voice fit depends on your examples, answers, task, model and setup; RawVoice does not promise perfect accuracy or exact imitation.
-
-Version 1.0 is the first public release version. License: MIT. Independent of OpenAI and Anthropic. See SETUP_GUIDE.txt, LIMITATIONS.txt and RELEASE_NOTES.txt for setup, privacy and test scope.
+See SETUP_GUIDE.txt for ChatGPT and Claude setup, and LIMITATIONS.txt for privacy and limitations.
