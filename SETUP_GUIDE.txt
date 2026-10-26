@@ -63,4 +63,4 @@ Claude skills and ZIP upload: https://support.claude.com/en/articles/12512180-us
 Claude Projects and knowledge: https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects
 
 TEST SCOPE
-The recorded end-to-end tests cover Claude. This copy/setup update does not claim a new ChatGPT or Claude model test. Other local-agent or API installation is outside this guide; the package includes no local installer or import script.
+Recorded tests cover Claude and one live ChatGPT Project run with a fictional persona: 15 Quick questions, profile files, fresh-chat retrieval and two writing prompts. See TEST_RESULTS.md in the repository for scope and limits. No new Claude test is claimed for this update. Other local-agent or API installation is outside this guide; the package includes no local installer or import script.

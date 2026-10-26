@@ -80,7 +80,7 @@ Use the attached writing samples or existing profile to create VOICE_PROFILE.md 
 
 AI can still make mistakes. Review profiles and drafts, and verify factual claims before using them. RawVoice doesn’t promise perfect accuracy, exact imitation or permanent memory. Your files and the host’s available tools determine what it can use.
 
-Recorded end-to-end tests cover **Claude**. A live **ChatGPT Project test is pending**; its setup guide is provided, but this release does not claim a completed ChatGPT test. [Test scope](RELEASE_NOTES.txt) · [Limitations](LIMITATIONS.txt).
+Tested in **Claude** and in a private **ChatGPT Project**. The ChatGPT run completed all 15 Quick questions, fresh-chat profile retrieval, an email and a fictional LinkedIn post. These are observed cases, not a guarantee for every prompt. [What was tested](TEST_RESULTS.md) · [Limitations](LIMITATIONS.txt).
 
 ## Need a hand?
 
