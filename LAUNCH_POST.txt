@@ -1,11 +1,13 @@
-I've been working on RawVoice, a Claude skill that turns writing preferences into something you can review and reuse.
+Your tone, your phrasing, your paragraph rhythm: writing preferences are worth keeping for the next draft.
 
-You can start with a 15-question Quick interview or bring an existing voice profile. RawVoice creates a detailed profile and a compact voice card. Once you've reviewed them, you can save both in a private Project and use them to guide future drafts.
+RawVoice turns those preferences into something you can save.
 
-The idea is to spend less time re-explaining your tone, paragraphing, formatting and dislikes every time you write. The interviewer, writing guidance, editing and optional text cleanup come in one package.
+It works with ChatGPT and Claude. Start with a 15-question Quick interview, or bring a voice profile you already use. You get a detailed profile and a short voice card to review and keep in a private Project.
 
-AI can still misunderstand your preferences or add a detail your notes didn't establish. You're responsible for reviewing the draft and checking factual claims before using or publishing it.
+Then use those files to guide the next post, article or email. If your preferences change, update the profile rather than starting the whole interview again.
 
-I'm interested in feedback on the setup, the usefulness of the interview and whether the resulting writing feels more like you.
+The download includes a Project setup for ChatGPT, an installable Claude skill, and a guide to using the same approved voice files in either platform.
 
-The download includes a setup guide, Project instructions and a fictional walkthrough. Keep your personal voice files private; share feedback without confidential examples.
+AI can still get things wrong. Read the draft, check the facts and make the final call yourself.
+
+RawVoice 1.0 is my first release version. I'd welcome feedback on the interview, the setup and whether the writing feels closer to your own. Keep private profiles and confidential examples out of feedback.

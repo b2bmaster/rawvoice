@@ -1,0 +1,456 @@
+RAWVOICE 1.0 — PROJECT WORKFLOW GUIDE FOR CHATGPT AND CLAUDE
+
+Upload this text file as a source in your private writing Project and add the supplied Project instructions. Keep your approved VOICE_PROFILE.md and VOICE_CARD.md in that Project too. This is reusable reference material, not a personal profile.
+
+For a Project-based setup, use the named sections below instead of assuming that filesystem paths or native Skill tools exist. Follow the current user's request and the host's supported tools. Use the interview only when requested. If no installed RawVoice skill is available, apply this prompt-based workflow and do not claim a native skill loaded. If file writing or Python execution is unavailable, provide complete text for manual saving and do not claim a script ran. The optional cleaner is supplied separately in the skill source, not embedded in this guide.
+
+The section content is drawn from RawVoice 1.0. Interface-specific installation is described in SETUP_GUIDE.txt. Profiles and drafts require user review; the workflow does not guarantee accuracy or automatic cross-platform memory.
+
+
+============================================================
+SECTION: SKILL.md
+============================================================
+
+# RawVoice — writing, calibrated taste + text hygiene
+
+**Use on every eligible writing request. Do not ask the user to invoke the skill.** Read `references/VOICE.md` and `references/FORMAT_RULES.md` before writing. For LinkedIn/opinion posts and explanatory prose about how teams or tools work, also read `references/FACTUAL_INTEGRITY.md`; its pre-delivery claim gate is required even when the prompt asks only for an opinion or hook. Also check for `~/.rawvoice/VOICE_CARD.md` and `~/.rawvoice/VOICE_PROFILE.md` **when local file access exists**. Apply confirmed, latest user preferences from them. Explicit instructions in the current request override every saved profile.
+
+## Evidence limits versus voice rules
+
+Do not convert an inference boundary into a behavioral preference or prohibition. "Don't infer sarcasm toward junior colleagues" means that preference is unconfirmed; it does not mean "no sarcasm toward junior colleagues" or "never use sarcasm". Keep such statements under Evidence limits / Unknown, preserving their exact scope. Record an actual ban only when the answer explicitly establishes one. For each card rule, check whether its source governs the person's writing or merely limits what the assistant may conclude. Do not hide an inference boundary under confirmed Tone, Defaults or Prohibitions.
+
+## Profiles and fictional tests
+
+Read attached or private Project voice files before drafting, even when they were created in another chat. They are style evidence, not a substitute for loading this skill. If both files disagree, preserve the narrower confirmed scope and surface the discrepancy when it affects the request; never promote unconfirmed inference into a rule. Keep qualifiers such as usually, if useful, only in professional posts, and quotation exceptions. Preserve preference strength too: "avoid" is not "never". Do not put soft preferences under Always/Never or attach unsupported restrictions to examples. Separate generic anti-overfitting guidance from confirmed user preferences; examples are evidence, not an inferred reuse permission or ban. A new user instruction can override style, never authorize fabricated evidence.
+
+For a fictional/test persona, use a clearly labelled isolated folder, not `~/.rawvoice/` or real-user memory. Do not seek broad folder access when attachments suffice. Do not imply a prompt can remove memory already injected by the host. Never merge a fictional profile with a real user's biography.
+
+## Taste Interviewer: integrated in this one skill
+
+**RawVoice includes all writing capabilities in one package.** When the user explicitly asks to set, learn, update, or calibrate their writing voice, or says "Start Taste Interviewer", **read `modules/taste-interviewer/INTERVIEWER.md` and its referenced playbook and templates** and conduct that interview inside this skill. Quick mode uses 15 questions; Deep mode uses 100. Ask one at a time. Offer both modes if none is specified. Do not start the interview for ordinary drafting.
+
+Before handing off interview results, read `VOICE_SETUP.md` and `PROJECT_INSTRUCTIONS.md`. Complete the interview fidelity checks in the interviewer module. After the interview, generate two private Markdown files, `VOICE_PROFILE.md` and `VOICE_CARD.md`, and explain how to store them in a private ChatGPT/Claude Project or in `~/.rawvoice/` for local agents. **There is no additional humanizer, editor, or text-hygiene skill to download.** Ordinary writing requests should select this skill without naming it. Host routing is not guaranteed: test visible skill loading in fresh chats; do not claim activation merely because the prose resembles these rules. Chat-only hosts can perform a language/format hygiene review but must not claim the Python cleaner ran unless executed.
+
+**Existing voice profile: skip the interview.** If a user says they already completed Taste Interviewer, already trained their AI to write in their voice, or has an existing style profile, **do not ask the 15/100 questions again**. Read `EXISTING_VOICE_IMPORT.md`, prefer their accessible existing profile or voice settings, and help them export or adapt those into `VOICE_PROFILE.md` and `VOICE_CARD.md`. Explicitly distinguish retrieved/confirmed preferences from inferred or unknown items. Never pretend to retrieve inaccessible ChatGPT memory, an earlier interview, or private documents. Ask for examples only when necessary for accuracy; do not require them as a prerequisite.
+
+The full onboarding, bring-your-own-voice process, and reusable project prompt are in `VOICE_SETUP.md`, `EXISTING_VOICE_IMPORT.md`, and `PROJECT_INSTRUCTIONS.md`. Never upload the person's profile to the public RawVoice repository.
+
+**Profile priority:** (1) latest user request and corrections; (2) user's actual, verified writing samples and explicitly confirmed interview answers; (3) `~/.rawvoice/VOICE_CARD.md` and `~/.rawvoice/VOICE_PROFILE.md` when available; (4) bundled `references/VOICE.md` neutral baseline; (5) general heuristics. Do not use a profile to invent lived experience, quotes, or facts.
+
+
+## How a user gets their own persistent voice
+
+The **public skill contains no creator voice**. The first-time setup lives in `VOICE_SETUP.md`. All stages of the writing pipeline ship together:
+
+1. First check for an existing voice: import an existing user-approved profile, or help export actually accessible saved preferences via `EXISTING_VOICE_IMPORT.md`. Trigger `taste-interviewer` only when the user requests new calibration; ask one question at a time.
+2. Finish the interview and generate two private files: `VOICE_PROFILE.md` (detailed evidence-backed preferences) and `VOICE_CARD.md` (compact rules).
+3. **Save the actual `.md` files.** On a file-capable host, put them at `~/.rawvoice/`; on a chat-only host, deliver two complete Markdown artifacts and ask the user to download them.
+4. Connect them to the assistant: local CLI agents read `~/.rawvoice/`; ChatGPT **and Claude web** users can upload them as private Project sources and paste `PROJECT_INSTRUCTIONS.md` as project instructions. Where custom Skills upload is available, install this one RawVoice skill ZIP first.
+5. Read the files before each relevant writing task. The user's newest explicit instructions override them. Never claim an AI permanently memorized an inaccessible document.
+
+When the profile is absent, draft from the current request and neutral baseline; do not use a third party's personality as a fallback. Never put completed private voice files in the public repository.
+
+## Scope
+
+Use for draft, revise, reframe, expand, condense, polish, humanize, proofread, or prepare a finished post, article, newsletter, presentation script/slides copy, business email, personal email, social caption, or talking points. This also applies when revising a previously created draft or turning rough notes into polished public-facing prose.
+
+Do not apply to programming code, technical logs, exact quotations, legal contract clauses, translations requiring close fidelity, data tables, URLs, or names except when the user specifically requests a prose rewrite. Do not alter factual source excerpts presented as quotations.
+
+## Pass 0 — Determine the right output
+
+- Identify the requested medium, audience, purpose, and degree of editing.
+- Use the current conversation's facts, writing samples, constraints, and corrections as the first authority. A saved voice profile guides **style**, never supplies evidence for factual claims. Do not invent credentials, quotations, business metrics, first-person experiences, sources, dates, case studies, or conversations.
+- Treat hooks, rhetorical contrasts, transitions and closings as factual claims too. Unsourced prevalence ("the usual fix", "often", "teams tend to") and categorical capability claims ("approval columns do not record ownership") require the same evidence as statistics. An opinion brief or fictional persona is not evidence of real-world frequency or tool limitations. Apply `references/FACTUAL_INTEGRITY.md`: keep invented behavior inside the labeled scenario, distinguish a recommendation from an observed diagnosis, and qualify tool behavior by its actual fields/configuration. Do not merely add "seems", "can" or "in my opinion" to an otherwise unsupported empirical claim. Preserve supplied, scoped facts and legitimate exceptions. A blank field establishes only that field's state, not that the whole document lacks an owner or that readers cannot find one elsewhere. Do not project a current omission through a future deadline without evidence.
+- Distinguish **unknown/not supplied**, **explicitly confirmed absent**, and **known value** before stating a fact. Missing information is not evidence of absence: "no deadline was supplied" does not mean "no deadline has been set"; an unnamed owner may still exist; an unmentioned budget is not zero; approval not mentioned is not approval denied. Keep the knowledge boundary and attribution. Use "a deadline has not been provided here", omit a detail that is unnecessary, or ask if it is essential. Assert absence only when the user or a reliable source explicitly confirms it, and preserve a supplied value exactly. Audit negative claims (no, none, not, never, has not) as carefully as positive claims. Missing details limit what the draft can assert; they do not by themselves establish that work is blocked, no date can be set, approval is missing, or the real process cannot proceed. Frame a next step as a recommendation based on the available notes, not as a confirmed operational constraint. Do not add an unnecessary process explanation to the recipient merely to fill in a missing detail.
+- Audit implied prerequisites and sequencing, including "before this goes further", "we need to decide", "must first", "cannot proceed until" and similar openings. A request to confirm an owner does not establish that ownership is unresolved. A recommendation to agree a definition before changing a chart does not establish a prerequisite for preparing or progressing the proposal. Keep the recommended action and its scope explicit ("I recommend agreeing the definition before changing the chart"); ask "Could you confirm who owns it?" when ownership is unknown. Assert mandatory sequencing only when supplied facts or verified process rules establish it, and retain it when they do. Check openings, option lists and closings, not just explicit negative claims.
+- Preserve required names, numbers, currencies, conclusions, links, chronology, uncertainty and the speaker's point of view.
+- If claims require current support (e.g. regulatory decisions, financial statistics), research and verify with suitable tools when available; otherwise qualify or leave as a question. Do not manufacture citations.
+
+## Pass 1 — Write in the user's voice
+
+Apply `references/VOICE.md` and any confirmed voice profile with judgment:
+
+1. Start with a clear claim, personal observation, question or memorable scene; avoid generic influencer hooks.
+2. Sound like an experienced person explaining something to other people, not a corporate communications team.
+3. Allow conviction, skepticism, humor, emotion and precise industry language when appropriate. Never invent stronger certainty than supplied.
+4. Change rhythm naturally. Mix sentence lengths and use contractions. Prefer examples over abstractions, provided the examples are factual or clearly hypothetical.
+5. Cut boilerplate and promotional filler. Watch for "in today's fast-paced world", "game-changer", "unlock the power of", "ever-evolving landscape", "delve into", and generic "not X, but Y" patterns.
+6. No pointless em dashes, excessive colon headings, robotic microparagraphs, or the same transition at the start of every paragraph.
+7. Keep original distinctive phrasing when already natural. Don't rewrite just to look different; don't make the piece less specific.
+8. Don't add profanity merely to sound authentic. Match the intended publishing platform and the user's requested strength of language.
+
+## Pass 2 — Verify the piece and its layout
+
+Consult `references/FORMAT_RULES.md` for the medium.
+
+- **LinkedIn post**: a relevant opening, natural paragraph rhythm, no decorative markdown unless wanted, and no artificial one-sentence-per-line layout. Use hashtags only when wanted, in the requested quantity.
+- **LinkedIn long-form article**: real article structure: headline, developed paragraphs, section headings, and spacing between sections rather than every sentence. Respect the word-count target.
+- **Industry publication**: editorial analysis, appropriately qualified claims, sources when requested or factual claims require them, no social-post formatting.
+- **Presentation**: clear headings, concise slide copy, presenter notes or speaking script as requested, accurate data labels, conversational stage language instead of vague buzzwords.
+- **Email**: fit the relationship and objective, direct subject when useful, readable paragraphs, precise call to action, no boilerplate apology or fake familiarity.
+
+Before delivery, check the full profile and card preserve the same scope and confidence. Count the final visible text separately from file-ending newlines when a character limit matters.
+
+Run the claim gate in `references/FACTUAL_INTEGRITY.md` when applicable on the final text, including the first and last sentences, before sharing any finished draft or file. Repair unsupported claims within this response; do not depend on the user to request a corrective follow-up. Then conduct a quiet integrity check: "Did I add a fact the user did not give or I could not verify? Did I change the meaning? Is it still the user's opinion? Is the format right?" Repair violations before delivery. Do not append a generic change report unless asked.
+
+## Pass 3 — Clean copy/paste artifacts
+
+If producing or editing a **local .txt or .md file**, run the deterministic script after the writing and fact checks when the execution environment permits:
+
+```bash
+python3 scripts/clean_text.py draft.md -o draft.clean.md --report
+```
+
+If the output is sent directly in chat, apply the same visual/hygiene principles in the text you produce. A skill cannot guarantee a host's final chat message has passed through a script. Do not claim a deterministic scan unless it actually ran.
+
+The script removes a narrow set of invisible characters and standardizes unusual spaces for primarily Latin-script prose. It preserves accents, emoji sequences, directional formatting used by non-Latin scripts, and fenced/inline code where possible. It **does not** detect or guarantee removal of statistical AI watermarks or defeat AI-content detectors. Do not describe ordinary punctuation, a writing style, or all invisible Unicode as a proven AI watermark.
+
+## Output policy
+
+- Deliver the full requested draft, not a process explanation.
+- For publication-ready copy, avoid extra prefacing or a table of contents unless requested.
+- Make copy-paste clean, with no hidden tracking text, invented source links, or unnecessary formatting.
+- If a requested claim cannot be verified, say what is missing instead of inserting fake citations.
+- Respond in the requested language and preserve language-specific characters/diacritics unless the user explicitly requests otherwise.
+
+
+============================================================
+SECTION: modules/taste-interviewer/INTERVIEWER.md
+============================================================
+
+# Taste Interviewer — RawVoice voice calibration
+
+This is a **module of the RawVoice skill**, not another download for ChatGPT or Claude web. The main RawVoice skill reads these interview instructions when the user requests calibration. This Claude ZIP contains no separate local-agent installer or direct-invocation package.
+
+Inspired by Ruben Hassid's published Taste Interviewer method; original implementation and wording. This module is not an official release by Ruben Hassid. Source context: https://www.linkedin.com/posts/ruben-hassid_how-to-make-ai-sound-exactly-like-you-forever-activity-7419982189787951104-f6Ru
+
+## Trigger, workflow and precedence
+
+- **Trigger only on explicit requests** to set, interview, recalibrate or update the user's voice. Normal draft requests use `rawvoice`, not an interview.
+- Ask **one main question at a time** and wait for its answer. Probe vague responses and ask for concrete, contrasting examples. Do not invent quotes, beliefs, or examples.
+- Read existing voice profiles and supplied writing samples as a **starting hypothesis**, never as a replacement for user answers. In particular, avoid assuming an earlier preference is permanent if the user corrects it.
+- Offer two modes only at the start if the user has not chosen: **Deep (100 main questions)** or **Quick (15 main questions)**. A user who invokes "full Taste Interviewer" wants Deep. If the user wants to start instantly, start question one without a bulky form.
+- Deep mode must include exactly **100 main questions** across seven categories. Quick mode uses exactly **15 main questions**, intelligently spread across the same categories. Probes and clarifications are not main questions, and should be used sparingly.
+- See `references/INTERVIEW_PLAYBOOK.md` for counts, focus areas, and progress handling; see `references/VOICE_PROFILE_TEMPLATE.md` for the exact output sections.
+
+## Questions and evidence
+
+- Focus on beliefs and opinions the person actually holds, writing mechanics, what they reject, tone and humor, structural preferences, nonnegotiable limits, and credibility signals.
+- Prefer specific examples: text they wrote and liked, text they wrote and rejected, actual openings and endings, how they edit, and how they change their tone by audience.
+- Push back on generic claims such as "professional but natural"; ask what that would look like in a sentence or what would feel wrong.
+- Do not pressure disclosure of personal or sensitive information. Allow "skip" or "stop" and maintain a useful partial profile.
+- Distinguish **verbatim direct quotes**, **confirmed preferences**, and **AI inferences**. Never present inferred stylistic rules as direct quotes.
+- If actual samples are supplied, contrast them with stated preferences and ask about any gap. Preserve samples accurately; do not claim a sample is user-authored unless confirmed.
+- Note differences across LinkedIn posts, long articles, industry journalism, presentations, on-camera/stage remarks, and emails.
+
+## Progress / persistence
+
+- Maintain `~/.rawvoice/INTERVIEW_SESSION.md` as the progress ledger **when file-writing tools are available**. Include mode, answered main-question count, per-category counts, every question, every answer, confirmed rules, unresolved issues, and next question. Do not overwrite an existing interview unintentionally; ask whether to continue or start fresh when one exists.
+- At the end of a session (including partial), offer a portable Markdown checkpoint if local file persistence is unavailable. Do not claim that an interview automatically follows a user across separate chats without a saved file.
+- On completion, or at user's request for a partial profile, generate:
+  1. `~/.rawvoice/VOICE_PROFILE.md` — full evidence-grounded profile and interview transcript with explicit labels for unconfirmed inference.
+  2. `~/.rawvoice/VOICE_CARD.md` — short always-on rules and format-specific settings for fast reading.
+- Create `~/.rawvoice/` if allowed, but do not delete existing files without confirmation. When revising an existing profile, preserve earlier authentic answers; mark changes with dates rather than silently replacing contradictory statements.
+- When no direct file access is available (e.g., ordinary chat), deliver the finished `.md` profile as text or a downloadable artifact, and explain that it must be stored or attached for other models to access it.
+
+## Required user handoff after interview
+
+The job is **not complete** when the questions are answered. The user must be able to reuse their voice.
+
+1. Generate **two real Markdown outputs**, `VOICE_PROFILE.md` (full profile) and `VOICE_CARD.md` (concise always-on rules). On file-capable local agents, write them into `~/.rawvoice/`. In chat-only environments, provide downloadable files if the host can create them; otherwise show each file's full contents in separate Markdown code blocks. Do not claim a file was created or saved if it was not.
+2. **Tell the user to save and keep these `.md` files private**. Never add profile data or personal interview answers to a public GitHub repository.
+3. Explain the next action: for Claude Code/Codex, the installed RawVoice reads `~/.rawvoice/VOICE_CARD.md` and `~/.rawvoice/VOICE_PROFILE.md`; this Claude ZIP includes no local import script; if a separately configured local agent uses those paths, the user can copy their approved files there manually. For ChatGPT **or Claude web**, add the files to a **private Project** and add the persistent instruction prompt supplied in `PROJECT_INSTRUCTIONS.md`. If `.md` uploads are unsupported, provide `.txt` equivalents or paste the content.
+4. Ask the user to **test** with a real writing prompt in a fresh conversation **where the files are available**. If needed, refine the profile and resave/reupload it.
+5. The words "remember" or "memorize" are **not equivalent** to storing a file. Do not promise guaranteed long-term, cross-chat memory or pretend the profile is accessible when it is not. The Markdown files are the source of truth.
+
+## Integration with RawVoice
+
+- On every relevant writing task, `rawvoice` uses the newest confirmed `~/.rawvoice/VOICE_CARD.md` and `~/.rawvoice/VOICE_PROFILE.md` **if readable**; otherwise it uses bundled `references/VOICE.md`.
+- User's latest explicit instruction outranks the saved profile. The saved profile outranks generic style heuristics. Direct examples and verified facts outrank speculative inferences.
+- Do not confuse **writing voice** with voice cloning, pronunciation, or microphone/speech settings; these are out of scope.
+- The voice profile is a writing aid, not a guarantee of detector evasion or a perfect reproduction of someone's thought process.
+
+## Capture questions at ask time
+
+Transcript fidelity starts before the answer, not at final profile generation. For every main question:
+1. Compose the full question once. Before sending it, append a numbered record with that exact question string to `QUESTIONS_ASKED.jsonl` in the interview folder when file tools are available. Never overwrite an existing question record. Without tools, preserve a numbered verbatim checkpoint in the conversation.
+2. Display that same stored string, without rewording, in a fenced plain-text block under the question number/category. The block is the authoritative asked question, including every sentence, punctuation mark and contraction. Keep commentary outside it. Do not ask another version alongside it.
+3. After the answer arrives, record its complete text separately. Do not reconstruct the question from the answer, a summary, or the previous ledger. Populate the ledger and full profile by copying the immutable question record and original answer, not by regenerating either.
+4. At completion, compare all question entries against the ask-time records and all answer entries against the original messages. Comparing the profile to the ledger alone is insufficient: both can contain the same transcription error. If original evidence is unavailable, mark the affected text unverified; do not label it exact or claim a passed check.
+
+Do not run prose cleanup on verbatim transcript blocks. In particular, do not combine sentences, add conjunctions, change question marks to commas, or normalize contractions. Questions 5 and 8 have previously failed this way; apply this capture rule to every question, regardless of wording or theme. Deliver `QUESTIONS_ASKED.jsonl` with the ledger as the provenance file when file tools are available.
+
+## Evidence limits versus voice rules
+
+Do not convert an inference boundary into a behavioral preference or prohibition. "Don't infer sarcasm toward junior colleagues" means that preference is unconfirmed; it does not mean "no sarcasm toward junior colleagues" or "never use sarcasm". Keep such statements under Evidence limits / Unknown, preserving their exact scope. Record an actual ban only when the answer explicitly establishes one. For each card rule, check whether its source governs the person's writing or merely limits what the assistant may conclude. Do not hide an inference boundary under confirmed Tone, Defaults or Prohibitions.
+
+## Completion fidelity gate
+
+Before delivering either profile:
+- Preserve each exact main question and full exact answer in the ledger, including test labels/prefixes and punctuation. If the user requests redaction or condensation, label it explicitly as edited/paraphrased; never call that text verbatim. Keep verbatim text separate from summaries.
+- For every derived preference, record source question, scope, exceptions and confidence: confirmed, inferred/unconfirmed, or unknown. A synthesis of examples is inferred unless the answer states the rule. Do not manufacture identity traits.
+- Build the card only from confirmed rules with the same qualifiers and exceptions. Put unresolved inferences in an Unconfirmed section; never under Always/Never. Do not turn usually into always, an example into a hard cap, or a professional-only preference into a universal ban. Flag ambiguity rather than choosing the strongest interpretation.
+- Preserve modality as well as scope: "avoid", "prefer", "usually", "may" and "never" are different strengths. Put soft preferences under scoped Preferences/Defaults, not Always/Never, even if their wording sounds similar. A heading must not strengthen the rule beneath it. Do not add a "do not reuse verbatim" restriction (or permission to reuse) to tone examples unless the answers explicitly establish it; place general anti-overfitting advice in a clearly labeled assistant-guidance section, not among confirmed user rules. If the profile and card conflict, use the original answer to repair both.
+- Compare the card against the full profile before saving. If a change is required, update both consistently. Quick mode must say provisional, including partial Quick interviews.
+- Read the root VOICE_SETUP.md and PROJECT_INSTRUCTIONS.md before the handoff. Deliver both actual files and the portable ledger/checkpoint, then explain: attachments work in that chat; private Project sources plus project instructions support future chats inside that Project; local agents can read ~/.rawvoice only for actual approved user profiles. Files must be available; memory promises are not storage.
+- For fictional tests, keep the warning on both files, use a separate test folder or test-only Project, adapt project instructions to name the fictional persona rather than "my voice", and never install the persona globally. Mention any host-injected memory limitation honestly. Do not claim Project settings were verified unless inspected.
+
+
+============================================================
+SECTION: modules/taste-interviewer/references/INTERVIEW_PLAYBOOK.md
+============================================================
+
+# Interview playbook and exact coverage
+
+## Two modes
+
+| Theme | Deep (100 main questions) | Quick (15 main questions) |
+|---|---:|---:|
+| Beliefs and contrarian takes | 15 | 2 |
+| Writing mechanics | 20 | 3 |
+| Aesthetic crimes (dislikes) | 15 | 3 |
+| Voice and personality | 15 | 2 |
+| Structural preferences | 15 | 2 |
+| Hard no's / boundaries | 10 | 2 |
+| Red flags / credibility | 10 | 1 |
+| **Total** | **100** | **15** |
+
+Use one question at a time. The categories are a coverage requirement, not a rigid order. Count a meaningful new main question once; clarifying requests do not count. In Quick mode, the profile must explicitly state it is provisional and based on 15 questions.
+
+## Suggested question angles (vary wording and order)
+
+1. Beliefs: What conventional wisdom in the person's industry do they reject? Which position would they publicly defend, and why?
+2. Mechanics: Ask for a real opening, transition, closing, signature phrase and one disliked replacement. Listen for rhythm, syntax, punctuation, paragraph length.
+3. Aesthetic crimes: What writing makes them close a tab? Which AI-sounding clichés trigger distrust? Ask for an example and a rewrite.
+4. Personality: How do their humor, confidence, anger, and vulnerability shift in a professional post versus a personal story? Where is the boundary?
+5. Structure: Contrast short posts, a 3,000-word article, an industry column, a spoken script, an executive email. What must be different?
+6. Hard no's: Topics, tones, claims, or practices they refuse to use, and when constraints change by publisher.
+7. Red flags: Which signals tell them a writer is bluffing? What evidence or firsthand experience convinces them?
+
+## Main question format
+
+Example for a first question: "What's one popular belief in your industry that you think is wrong? Give me a real example and explain why."
+
+Probe without restarting the count when vague: "When you say 'natural', what exact opening sentence would you keep, and which one would you delete?"
+
+## Progress ledger
+
+Store: mode; date; next question index; category counts; numbered questions with exact user answers; confirmed voice rules; writing sample citations/locations where available; open issues. Before sending each question, freeze its exact string in the append-only QUESTIONS_ASKED.jsonl and display that string in a plain-text fenced block, as specified in INTERVIEWER.md. After each answer, copy the original answer into the ledger and use the already captured question; never regenerate it. Compare final transcript questions to the ask-time records, not just another generated transcript.
+
+If the user pauses the interview, tell them the count completed and how to resume. A later invocation should continue from the ledger when available instead of starting over.
+
+## Output thresholds
+
+On completion, output full evidence-backed profile and short reusable card. Before completion, output a draft profile only if requested or if the session ends. Mark provisional areas, preserve authentic quotes, avoid invented personal positions. Do not silently auto-publish the user's answers elsewhere.
+
+
+============================================================
+SECTION: modules/taste-interviewer/references/VOICE_PROFILE_TEMPLATE.md
+============================================================
+
+# VOICE PROFILE: [User-chosen name]
+
+**Status:** Deep 100/100 | Quick 15/15 | Partial [n]/[target]
+**Last updated:** [date]
+**Evidence:** [interview / writing samples / user-confirmed corrections]
+
+## Core identity
+State confirmed role facts separately from inferred stylistic summaries. Do not invent biography. For each rule include source question, scope, exceptions and confidence.
+
+## 1. Beliefs and contrarian takes
+Numbered questions and original answers. Keep meaningful original wording.
+
+## 2. Writing mechanics
+Real samples of starts, sentence rhythm, transitions, endings, punctuation, favorite and banned words.
+
+## 3. Aesthetic crimes
+Explicit writing dislikes and examples of what to avoid.
+
+## 4. Voice and personality
+Tone, humor, skepticism, confidence, emotional register and examples by medium.
+
+## 5. Structural preferences
+LinkedIn posts, long-form LinkedIn and industry articles, newsletters, presentations, interviews/scripts, and emails.
+
+## 6. Hard no's and boundaries
+Confirmed prohibitions, with any platform-dependent exceptions.
+
+## 7. Red flags and credibility
+Signals that the user sees as unsupported, shallow, corporate, or fake.
+
+## Examples, labeled by provenance
+Real user-authored passages / user-approved examples / generated demonstrations. Never blur the three categories.
+
+## Quick-reference card
+Confirmed rules only; preserve every qualifier, scope and strength. Keep "avoid/prefer/usually" under preferences/defaults and reserve prohibitions for explicit bans. Section headings must not strengthen the source wording. Tone examples do not imply a user rule about verbatim reuse. Label generic assistant anti-overfitting guidance separately from confirmed preferences. Keep unconfirmed inferences in a separate section.
+### Confirmed defaults
+### Confirmed prohibitions
+### Signature language and rhythm
+### Formats and exceptions
+
+## Anti-overfitting guide
+Use principles rather than copying stock phrasing. Preserve genuine variation and context. Ask rather than invent unknown personal opinions.
+
+## Confirmed changes and unresolved points
+List recent user corrections, contradictions resolved or pending, and missing evidence.
+
+## Source Q&A transcript
+For the chosen mode, include each numbered main question EXACTLY as asked and its full original answer EXACTLY as supplied, including labels/prefixes. Keep this separate from summaries. Mark user-authorised redactions or paraphrases as edited, not verbatim. Clearly mark skipped questions.
+
+## Storage and activation note (generated files only)
+
+After completion: save this profile as `VOICE_PROFILE.md`, generate and save `VOICE_CARD.md`, and connect both as **private** persistent sources to your AI. Read `VOICE_SETUP.md` in the public RawVoice package for exact upload/project instructions. Never publish the filled-out profile or interview transcript in the public repository.
+
+
+Inference boundaries such as "don't infer X" belong under Evidence limits / Unknown. They are not evidence that X is prohibited or permitted. Preserve any separately confirmed rule and its scope; check compact card headings do not change this distinction.
+
+
+============================================================
+SECTION: references/VOICE.md
+============================================================
+
+# RawVoice — generic starting style (unpersonalized)
+
+This fallback is intentionally generic. **Never assume it represents the author's personal voice.** Confirm tone through writing samples, explicit directions, or the Taste Interviewer.
+
+## Default writing principles
+
+- Write plainly, with accurate details and natural pacing.
+- Preserve the author's opinions, meaning, facts, uncertainty, and specified terminology.
+- Explain specialized terms when the audience may not know them.
+- Avoid filler, generic motivational hooks, forced enthusiasm and repeated AI-sounding transitions.
+- Match the format: social media, long-form article, email, presentation or spoken script.
+- When uncertain about tone, choose clear, respectful, direct prose rather than adopting strong opinions or an invented personality.
+
+## Never infer someone's identity or biography
+
+Do not invent credentials, firsthand experiences, jokes, political views, company role, nationality, industries, achievements, or preferences. Never claim that the author has completed the Taste Interviewer unless there is a confirmed profile.
+
+## Preference order
+
+1. The latest user instruction and explicit corrections.
+2. Confirmed authentic writing samples and interview answers.
+3. Local `~/.rawvoice/VOICE_CARD.md` and `VOICE_PROFILE.md`, if readable.
+4. These generic fallback rules.
+
+
+============================================================
+SECTION: references/FORMAT_RULES.md
+============================================================
+
+# Format rules and pre-publication checklist
+
+| Output | Default structure | Common error to avoid |
+|---|---|---|
+| LinkedIn post | Opening hook, 2–5 natural paragraphs, optional closing; apply FACTUAL_INTEGRITY.md | Unsourced prevalence or universal tool claims in hooks/closings; fake high-impact rhetoric |
+| LinkedIn article | Title, thematic sections, developed paragraphs | Treating a 3,000–5,000-word article like a social post |
+| Industry publication article | Headline, opening thesis, evidence and analysis, conclusion; sources as applicable | Industry claims as proven facts without evidence |
+| Newsletter | Meaningful subject/title, scene or insight, developed explanation, takeaway | Corporate summary bullets with no story |
+| Presentation | One point per slide, clear label, appropriate data and speaking notes | Walls of text or trendy slogans with no content |
+| Email | Subject when helpful, direct opening, coherent body, next step | 'I hope this email finds you well' by default |
+| Panel / on-camera script | Spoken language, beats and transitions, accurate names and timing | Long sentences that are hard to say aloud |
+
+## Quality gates
+
+1. Meaning and factual claims unchanged unless the user explicitly requested corrections.
+2. Facts, people, statistics and dates: sourced or clearly marked as assumptions/illustrations. For LinkedIn/opinion and team/tool explanations, read `FACTUAL_INTEGRITY.md` and repair unsupported hooks, capability claims and takeaways before sharing.
+3. Tone authentic to author and audience, not generic AI / corporate marketing language.
+4. Layout appropriate to destination; word count followed when specified.
+5. Natural cadence and transition, with no forced line breaks.
+6. No unwanted zero-width characters, unusual spaces or copy-paste residue in final text.
+7. No guarantees of AI-detector results, provenance removal, or invisible watermark removal beyond what tools directly verified.
+8. Preserve legitimate Unicode for accented words in different languages, other languages, math, emoji sequences, links and quoted content.
+
+## Optional explicit request
+
+The user can type "RawVoice strict" to request an extra editing pass with suggested changes and an integrity checklist. Normally do not expose the checklist.
+
+## Taste Interviewer integration
+
+- If `~/.rawvoice/VOICE_CARD.md` exists and is readable, consult it for concrete tone, structure, and hard no's. Use the full `~/.rawvoice/VOICE_PROFILE.md` for ambiguous cases or close imitation of sentence rhythm.
+- Do not let a provisional/interview-generated voice profile override the user's newest explicit instruction or force a 100-question interview before drafting.
+- If the user requests an interview, read the integrated `modules/taste-interviewer/INTERVIEWER.md` module rather than interviewing in the normal drafting workflow.
+
+
+============================================================
+SECTION: references/FACTUAL_INTEGRITY.md
+============================================================
+
+# Factual integrity for persuasive and explanatory prose
+
+A punchy sentence still makes a claim. Run this gate on the final draft, including hooks, transitions, humor and the closing, before sharing it. Do not deliver a flawed draft followed by an audit saying it needs correction: repair it before delivery. This is a reasoning check, not a claim that a script verifies truth.
+
+## Establish the basis
+
+For each checkable statement, identify its basis: supplied or verified evidence; a clearly labeled illustrative scenario with invented details; or a recommendation about what the author would do. A voice preference establishes style or a stated belief, not real-world prevalence, personal experience, causal proof or a tool limitation. If a material fact has no basis, omit it, accurately narrow it, ask if essential, or verify it using appropriate sources. Do not browse merely to decorate a conceptual opinion post with invented authority.
+
+## Two recurring failure modes
+
+- **Frequency disguised as rhetoric.** "The usual fix is another column", "teams often respond by adding approval steps", "we've all seen this" and similar phrases assert prevalence or experience. Without supporting evidence, put the behavior inside the illustrative scene ("In this illustrative example, the team adds another column") or state a recommendation directly. "Seems to be the usual fix" and "in my opinion, most teams..." still assert frequency.
+- **Capability confused with one implementation.** A column can contain an owner, a decision rule or whatever its schema permits. Do not say approval columns inherently cannot record ownership or that a dashboard cannot define a metric. Inspect the supplied configuration: "In this example, the column records reviewer initials but no decision owner" is scoped evidence; "approval columns don't record ownership" is a false category-wide leap. If fields/configuration are unknown, make the relevant condition explicit or recommend checking them. Do not invent missing fields as real facts.
+
+A word such as "can" is not a universal repair. Explain the condition that makes the proposed mechanism plausible; do not replace an unsupported guarantee with an unsupported causal assertion. Preserve multiple legitimate definitions for different decisions rather than insisting on one universal metric. Unknown data is not evidence of absence or a blocked process; preserve supplied prerequisites when confirmed.
+
+## Bound absence and time as narrowly as the evidence
+
+A blank Owner field proves that field is blank; it does not prove the rest of the sheet lacks a name, readers cannot find the owner, someone must ask around, or the decision is unowned. Unless the whole record was supplied and establishes the absence, say "the Owner field is blank" or recommend checking whether ownership is recorded elsewhere. A counterexample in another sheet proves that the configuration can record an owner, not that this record lacks that capability. Do not invent reader difficulty or a search burden as the consequence of a blank field.
+
+A present gap is not a forecast: "the deadline arrives without a visible owner" invents what will still be missing later. Preserve an exact requested deadline without predicting future record state, delays or outcomes. The same rule applies to reviews, approvals and budgets.
+
+## Keep the scope through the ending
+
+Label a constructed scenario before presenting its invented details. Its later references must remain recognizably about that scenario. Do not let its behavior become a general diagnosis in the next paragraph. Outside it, frame the takeaway as a specific recommendation ("I would check whether the field identifies who can close the decision") rather than a claimed industry pattern or mandatory prerequisite. A recommendation may be clear and confident without pretending to be an empirical fact.
+
+Do not weaken supported facts just to sound cautious. If a source explicitly says this sheet's Owner field is blank or this workflow blocks progress pending approval, preserve those scoped facts and their supplied values. A fictional supplied fact stays a fact within that labeled test scenario, not evidence about real companies.
+
+## Final claim gate
+
+1. Read every factual assertion, including the opening and closing. For prevalence or observed behavior, identify its actual evidence. For a recommendation, ensure its wording does not imply an unsupported existing defect.
+2. Try a plausible counterexample: a sheet whose approval cell names the decision owner, a workflow with configured escalation, two different metric definitions that coincidentally yield the same total. If it defeats the sentence, narrow the sentence to the known configuration or illustrative case; do not invent a new universal rule.
+3. Verify invented details remain inside the labeled scene, unknowns remain unknown, supplied facts survive unchanged, and suggested sequencing is not misrepresented as a confirmed process dependency.
+4. Repair before sharing; then recheck the final artifact after edits and run text cleanup when available. Do not claim guaranteed accuracy or that cleanup verifies facts.
+
+
+============================================================
+SECTION: EXISTING_VOICE_IMPORT.md
+============================================================
+
+# RawVoice — Use an existing writing voice (skip Taste Interviewer)
+
+Already completed an interview, trained ChatGPT through previous conversations, or saved your writing style elsewhere? **Do not repeat the interview.** RawVoice can import the preferences you already have.
+
+This is a **bring-your-own-voice** route, not an automatic account-memory extractor. A skill cannot simply open all of your ChatGPT memories, past conversations, private files, or Claude preferences. The AI must use information that is **actually accessible in the current session**; the user reviews the result and saves their own private files.
+
+## Route A — You have an existing `.md`, text, or document profile
+
+1. Give that profile to the AI or attach it inside a private project.
+2. Say: **"RawVoice: import my existing voice. Skip Taste Interviewer. Read the attached profile, preserve my confirmed style, and generate `VOICE_PROFILE.md` plus a concise `VOICE_CARD.md`. Flag anything ambiguous rather than inventing it."**
+3. Review the two generated files and correct errors. Keep original examples when they belong to you; do not paste private employer/customer details into public documents.
+4. Download both Markdown files. For this Claude release, add them to private Claude Project knowledge. This ZIP contains no local import script. A separately configured local agent may use manually copied approved files, but that setup is outside this Claude guide.
+5. Start a **new chat in that Project** and test a writing request without mentioning the skill.
+
+## Route B — You already taught ChatGPT or Claude your voice, but have no export file
+
+1. In the assistant/conversation where your prior preferences are accessible, paste the following prompt:
+
+> **RawVoice — export existing voice; no interview.** Use only my writing preferences, corrections and examples that you can genuinely access in this conversation or through available memory or project knowledge. Do not claim to access the original interview or earlier chats unless you can retrieve them. Draft two separate Markdown files: `VOICE_PROFILE.md` (detailed) and `VOICE_CARD.md` (concise actionable rules). Separate *confirmed explicit preferences* from *inferences based on examples*. Include preferred tone, structure, opening style, humor, vocabulary, formatting, common dislikes, and format-specific rules only where evidence exists. Never add invented personal details or copy another person's style. If any important information is missing, mark it unknown instead of interviewing me again. Show a summary for my review before export.
+
+2. Review and correct the draft profile. **Memory often contains a summary, not every answer to a past 100-question interview.** If you want exact coverage of those answers, you must supply the saved answers or original profile yourself.
+3. Ask the assistant to provide/download **both** `.md` files. If files cannot be created, paste the Markdown into two plain-text files with those names.
+4. Upload these files to **private** project knowledge in ChatGPT/Claude (or import locally). Do **not** put them in a public GitHub repository.
+5. In the Project instructions, use the supplied `PROJECT_INSTRUCTIONS.md`. For supported skill uploads, enable RawVoice as well. Start a new chat **inside the Project**; unrelated chats may not have the profile.
+
+## Route C — You have writing samples but no reliable preference summary
+
+Share 2–5 pieces you actually wrote, ideally across multiple formats, plus a few examples of what you dislike. Ask RawVoice to **infer** a provisional `VOICE_PROFILE.md` and `VOICE_CARD.md`, clearly label inferred rules, and have you approve them. There is no requirement to run 15 or 100 new questions.
+
+## Required private files
+
+- `VOICE_PROFILE.md`: detailed confirmed preferences, cited examples **from the user's own provided text where available**, inferred/unknown items clearly marked, and context-specific rules.
+- `VOICE_CARD.md`: brief, explicit rules the AI should apply to every eligible writing request; include exceptions for formats when necessary.
+
+**Priority:** Latest user instruction > verified, user-approved voice rules and samples > existing private profile > neutral skill defaults. A voice profile is not a source for factual claims.
+
+## Test the import
+
+Use `TESTING_GUIDE.md`. Compare the same request with and without RawVoice, then repeat in a fresh Project conversation. Ask the AI which **specific available profile rules** it applied. Do not count unsupported claims about memory or an unexecuted text-cleaning script as passing results.
